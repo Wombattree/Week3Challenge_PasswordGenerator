@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="cardHeader">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="cardBody">
+        <textarea
+          readonly
+          id="passwordDisplay"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
+      </div>
+
+      <div class="cardGeneratePassword">
+        <button id="generatePasswordButton" class="passwordButton">Generate Password</button>
+      </div>
+
+      <div class="passwordOptionSliderContainer">
+        <p class="passwordOptionTitle">Password Length:</p>
+        <input type="range" min="8" max="128" value="8" id="passwordLengthSlider">
+      </div>
+
+      <div class="passwordOptionContainer">
+        <p class="passwordOptionTitle">Valid Characters:</p>
+
+        <p class="passwordOption">Lower Case </p>
+        <input type="checkbox" id="isLowerCaseValid" checked>
+
+        <p class="passwordOption">Upper Case </p>
+        <input type="checkbox" id="isUpperCaseValid" checked>
+
+        <p class="passwordOption">Numbers </p>
+        <input type="checkbox" id="areNumbersValid" checked>
+
+        <p class="passwordOption">Special </p>
+        <input type="checkbox" id="areSpecialValid" checked>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

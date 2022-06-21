@@ -9,4 +9,4 @@ A task for the Adelaide Uni Bootcamp to create a simple password generator with 
 # Where Can I See It?
 [Click here for to see the website live](https://wombattree.github.io/Week3Challenge_PasswordGenerator/)
 
-![Preview Image](./assets/readMeImage.png?raw=true "Preview Image")
+![Preview Image](./Assets/readMeImage.png?raw=true "Preview Image")

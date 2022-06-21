@@ -1,9 +1,9 @@
 var generateButton = document.getElementById("generatePasswordButton");
 var passwordText = document.getElementById("passwordDisplay");
 
-var lowerCaseCharcters = GetLowerCaseCharacters();
-var upperCaseCharacters = GetUpperCaseCharacters();
-var numberCharacters = GetNumberCharacters();
+var lowerCaseCharcters = GetAlphabeticalCharacters(true);
+var upperCaseCharacters = GetAlphabeticalCharacters(false);
+var numberCharacters = GetNumericalCharacters();
 var specialCharacters = GetSpecialCharacters();
 
 function GeneratePassword()
@@ -30,7 +30,7 @@ function GeneratePassword()
   {
     var password = "";
 
-    for (let i = 0; i < passwordLength; i++) 
+    for (let i = 0; i < passwordLength; i++)
     {
       password += GetCharacter(validCharacters);
     }
@@ -45,17 +45,12 @@ function GetCharacter(characters)
   return characters[value];
 }
 
-function GetLowerCaseCharacters()
+function GetAlphabeticalCharacters(lowerCase)
 {
-  return [...Array(26)].map((num, i) => String.fromCharCode(i + 97));
+  return [...Array(26)].map((num, i) => String.fromCharCode(i + (lowerCase ? 97 : 65)));
 }
 
-function GetUpperCaseCharacters()
-{
-  return [...Array(26)].map((num, i) => String.fromCharCode(i + 65));
-}
-
-function GetNumberCharacters()
+function GetNumericalCharacters()
 {
   let num = [];
   for (let i = 0; i < 10; i++) { num.push(i); }
